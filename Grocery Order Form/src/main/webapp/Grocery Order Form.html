@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Grocery Order</title>
+</head>
+<body>
+  <h2>Online Grocery Order</h2>
+
+  <form action="order.php" method="POST">
+    <!-- Customer Details -->
+    <fieldset>
+      <legend>Customer Details</legend>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="fullname" required placeholder="Enter your full name" autofocus><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="example@email.com"><br><br>
+
+      <label for="mobile">Mobile Number:</label>
+      <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="10-digit number"><br><br>
+
+      <label for="address">Delivery Address:</label><br>
+      <textarea id="address" name="address" required placeholder="Enter your address"></textarea>
+    </fieldset>
+
+    <br>
+
+    <!-- Order Details -->
+    <fieldset>
+      <legend>Order Details</legend>
+
+      <p>Select Grocery Items:</p>
+      <input type="checkbox" name="items[]" value="Rice"> Rice<br>
+      <input type="checkbox" name="items[]" value="Milk"> Milk<br>
+      <input type="checkbox" name="items[]" value="Bread"> Bread<br>
+      <input type="checkbox" name="items[]" value="Eggs"> Eggs<br>
+      <input type="checkbox" name="items[]" value="Sugar"> Sugar<br><br>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+
+      <label for="date">Delivery Date:</label>
+      <input type="date" id="date" name="delivery_date" required><br><br>
+
+      <label for="time">Preferred Delivery Time:</label>
+      <input type="time" id="time" name="delivery_time"><br><br>
+
+      <p>Payment Method:</p>
+      <input type="radio" name="payment" value="Cash on Delivery" required> Cash on Delivery<br>
+      <input type="radio" name="payment" value="UPI"> UPI<br>
+      <input type="radio" name="payment" value="Card"> Card<br><br>
+
+      <label for="instructions">Special Instructions:</label><br>
+      <textarea id="instructions" name="instructions" placeholder="Any special notes (optional)"></textarea><br><br>
+
+      <input type="checkbox" name="confirm" required> I confirm my order<br><br>
+
+      <input type="submit" value="Submit Order">
+      <input type="reset" value="Reset Form">
+    </fieldset>
+  </form>
+</body>
+</html>
