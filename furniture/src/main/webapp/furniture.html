@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Furniture Store Catalog</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    .catalog {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px;
+      width: 250px;
+      background-color: white;
+      text-align: center;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+    }
+
+    .product p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .product .price {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .product button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Elegant Living Furniture</h1>
+    <p>Style your space with comfort and class</p>
+  </header>
+
+  <div class="catalog">
+    <!-- Sofa Card -->
+    <div class="product">
+      <img src="sofa.jpg" alt="Sofa">
+      <h3>Sofa</h3>
+      <p>Comfortable and stylish sofa</p>
+      <div class="price">$499</div>
+      <button>Buy Now</button>
+    </div>
+
+    <!-- Dining Table Card with inline background color -->
+    <div class="product" style="background-color: #e0f7fa;">
+      <img src="table.jpg" alt="Dining Table">
+      <h3 style="color: darkgreen;">Dining Table</h3>
+      <p>Wooden dining table</p>
+      <div class="price">$299</div>
+      <button>Buy Now</button>
+    </div>
+
+    <!-- Chair Card with inline button style -->
+    <div class="product">
+      <img src="chair.jpg" alt="Chair">
+      <h3>Chair</h3>
+      <p>Modern chair for any room</p>
+      <div class="price">$149</div>
+      <button style="background-color: black; color: white;">Buy Now</button>
+    </div>
+  </div>
+
+</body>
+</html>
