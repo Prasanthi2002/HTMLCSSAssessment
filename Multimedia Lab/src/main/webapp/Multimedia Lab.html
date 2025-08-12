@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Multimedia Lab</title>
+</head>
+<body>
+  <h1>HTML5 Multimedia Lab</h1>
+  <p>Practice with <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;iframe&gt;</code>, and <code>SVG</code></p>
+
+  <!-- Video -->
+  <h2>Video</h2>
+  <video width="400" controls poster="poster.jpg">
+    <source src="sample.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Audio -->
+  <h2>Audio</h2>
+  <audio controls loop>
+    <source src="sample.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Embed PDF -->
+  <h2>Embedded PDF</h2>
+  <embed src="document.pdf" type="application/pdf" width="600" height="400">
+  <p>If not visible, <a href="document.pdf" download>download document.pdf</a>.</p>
+
+  <!-- Iframe -->
+  <h2>Embedded Page</h2>
+  <iframe src="demo.html" width="600" height="300" title="Embedded Demo Page">
+    Your browser does not support iframes.
+  </iframe>
+
+  <!-- Inline SVG -->
+  <h2>Inline SVG</h2>
+  <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="10" width="180" height="80" fill="lightblue" stroke="black" stroke-width="2"/>
+    <text x="100" y="55" font-size="16" text-anchor="middle" fill="black">SVG Box</text>
+  </svg>
+</body>
+</html>
