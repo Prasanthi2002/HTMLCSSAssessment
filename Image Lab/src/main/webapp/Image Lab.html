@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Lab — Gallery</title>
+</head>
+<body>
+  <h1>Image Lab — Gallery</h1>
+  <p>Practice with <code>&lt;img&gt;</code>, <code>srcset</code>, <code>&lt;picture&gt;</code>, SVG, and accessibility</p>
+
+  <h2>Responsive Image Gallery</h2>
+
+  <!-- Simple image -->
+  <div>
+    <img src="basmati-rice.jpg" alt="Basmati rice — 5 kg bag">
+    <p>Basmati rice — 5 kg bag.</p>
+  </div>
+
+  <!-- Picture element with WebP fallback -->
+  <div>
+    <picture>
+      <source srcset="assorted-snacks.webp" type="image/webp">
+      <img src="assorted-snacks.jpg" alt="Assorted Snacks Box">
+    </picture>
+    <p>Assorted Snacks Box (WebP served when supported).</p>
+  </div>
+
+  <!-- Accessible SVG -->
+  <div>
+    <svg aria-labelledby="delivery-truck-title delivery-truck-desc" width="100" height="60">
+      <title id="delivery-truck-title">Delivery truck</title>
+      <desc id="delivery-truck-desc">SVG inline with accessible title/desc.</desc>
+      <rect x="10" y="20" width="80" height="30" fill="gray" />
+      <circle cx="25" cy="55" r="5" fill="black" />
+      <circle cx="75" cy="55" r="5" fill="black" />
+    </svg>
+    <p>Delivery truck (SVG inline with accessible title/desc).</p>
+  </div>
+
+  <!-- Decorative SVG (hidden from screen readers) -->
+  <div>
+    <svg aria-hidden="true" width="200" height="20">
+      <line x1="0" y1="10" x2="200" y2="10" stroke="blue" stroke-width="2" />
+    </svg>
+    <p>Decorative divider (not read by screen readers).</p>
+  </div>
+
+  <!-- Image map -->
+  <div>
+    <img src="image-map.jpg" usemap="#image-map" alt="Click a section to navigate to that aisle">
+    <map name="image-map">
+      <area shape="rect" coords="0,0,100,100" href="rice-aisle.html" alt="Rice aisle">
+      <area shape="rect" coords="100,0,200,100" href="snacks-aisle.html" alt="Snacks aisle">
+    </map>
+    <p>Click a section to navigate to that aisle (image map).</p>
+  </div>
+
+  <!-- Notes -->
+  <h2>Notes</h2>
+  <p>Use <code>srcset</code> and <code>&lt;picture&gt;</code> to reduce bandwidth and serve modern formats. Add <code>loading="lazy"</code> to defer-screen images.</p>
+
+  <!-- Submit Button -->
+  <button type="submit">Submit Lab</button>
+</body>
+</html>
